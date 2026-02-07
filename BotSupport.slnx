@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="BotEngine/BotEngine.csproj" />
+  <Project Path="MockServices/MockServices.csproj" />
+</Solution>

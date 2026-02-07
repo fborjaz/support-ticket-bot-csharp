@@ -1,0 +1,75 @@
+@BotEngine_HostAddress = http://localhost:5020
+
+### Mensaje de bienvenida
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-123",
+  "message": "Hola"
+}
+
+### Iniciar creación de ticket
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-123",
+  "message": "Quiero crear un ticket"
+}
+
+### Enviar nombre
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-123",
+  "message": "Juan Pérez"
+}
+
+### Enviar email
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-123",
+  "message": "juan.perez@email.com"
+}
+
+### Enviar descripción
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-123",
+  "message": "Mi aplicación no carga correctamente, muestra error 500 al intentar iniciar sesión"
+}
+
+### Confirmar creación
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-123",
+  "message": "sí"
+}
+
+### Consultar estado de ticket
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-456",
+  "message": "ver estado del ticket TCK-001"
+}
+
+### Cancelar flujo
+POST {{BotEngine_HostAddress}}/messages
+Content-Type: application/json
+
+{
+  "conversationId": "user-789",
+  "message": "cancelar"
+}
+
+###

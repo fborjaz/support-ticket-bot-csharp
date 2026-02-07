@@ -1,0 +1,25 @@
+@MockServices_HostAddress = http://localhost:5121
+
+### Obtener token OAuth
+# @name getToken
+POST {{MockServices_HostAddress}}/oauth/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&client_id=bot-client&client_secret=bot-secret
+
+### Crear ticket (requiere token)
+POST {{MockServices_HostAddress}}/tickets
+Content-Type: application/json
+Authorization: Bearer {{getToken.response.body.accessToken}}
+
+{
+  "name": "Juan Pérez",
+  "email": "juan@email.com",
+  "description": "Problema con la aplicación"
+}
+
+### Consultar ticket
+GET {{MockServices_HostAddress}}/tickets/TCK-001
+Authorization: Bearer {{getToken.response.body.accessToken}}
+
+###
