@@ -203,10 +203,3 @@ Bot: Crea ticket → Retorna ID (TCK-XXX)
 - Tokens OAuth con expiración y renovación automática
 - Límite de intentos por paso
 
-## 📝 Licencia
-
-MIT License - Ver [LICENSE](LICENSE) para más detalles.
-
-## 👨‍💻 Autor
-
-Desarrollado como prueba técnica de motor conversacional en C#.
